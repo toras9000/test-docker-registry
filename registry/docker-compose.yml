@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  app:
+    image: registry:2
+    ports:
+        - "5000:5000"
+    volumes:
+      - ./volumes/registry/:/var/lib/registry/
+      - ./assets/configs/registry-config.yml:/etc/docker/registry/config.yml
